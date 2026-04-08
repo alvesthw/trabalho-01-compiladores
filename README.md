@@ -1,205 +1,177 @@
+# README da Linguagem T01 — versão comentada em Python
+
+"""
 # 🧠 Linguagem T01 — Documentação Oficial
+# Cabeçalho do projeto mostrando o nome da linguagem
 
 ## 📌 Visão Geral
-A linguagem **T01** foi desenvolvida para fins acadêmicos, utilizando **JavaCC**. Seu objetivo é permitir a criação de programas simples que incluam:
-
-- Declaração de variáveis  
-- Atribuições de valores  
-- Entrada (`input`) e saída (`printf`) de dados  
-- Estruturas condicionais (`if`, `else`)  
-- Estruturas de repetição (`while`, `do-while`, `for`)  
-- Estrutura de decisão (`switch-case`)  
-
-O parser é configurado para debug, facilitando o acompanhamento da análise léxica e sintática do código.
+# Breve descrição do objetivo da linguagem T01
+# Desenvolvida para fins acadêmicos usando JavaCC
+# Permite criar programas simples com:
+# - Declaração de variáveis
+# - Atribuições
+# - Entrada e saída de dados
+# - Estruturas condicionais e de repetição
+# - Estruturas de decisão switch-case
+# O parser possui configuração de debug para acompanhar análise léxica e sintática
 
 ---
 
 ## ⚙️ Tecnologias Utilizadas
-- Java  
-- JavaCC  
+# Linguagens e ferramentas usadas no projeto
+# - Java
+# - JavaCC
 
 ---
 
 ## 🚀 Como Executar
 
 ### 1. Pré-requisitos
-- Java JDK instalado  
-- JavaCC configurado no ambiente  
+# Antes de executar, é necessário:
+# - Java JDK instalado
+# - JavaCC configurado no ambiente
 
 ### 2. Executando o projeto
+# Passos para compilar e executar o parser
 
-1. Compile o arquivo `.jj` com JavaCC:
-   ```bash
-   javacc T01.jj
+# 1. Compile o arquivo .jj com JavaCC
+# bash command:
+# javacc T01.jj
 
-2. Compile os arquivos Java gerados:
-    bash
+# 2. Compile os arquivos Java gerados
+# bash command:
+# javac *.java
 
-    javac *.java
+# 3. Execute o parser
+# bash command:
+# java trabalho1.T01
 
-3. Execute o parser:
-    bash
+# Arquivo de entrada usado no parser:
+# ..//JavaCC//src//trabalho1//teste07.txt
 
-    java trabalho1.T01
+### 3. Estrutura Léxica
+# Definição dos tokens, tipos de dados e palavras reservadas da linguagem
 
-Arquivo de entrada:
+# 🔹 Tokens Principais
+# Parênteses: (, )
+# Chaves: {, }
+# Colchetes: [, ]
+# Fim de linha: ;
+# Operadores de comparação: =, ==, !=, >, <, >=, <=
 
-..//JavaCC//src//trabalho1//teste07.txt
-###  3. Estrutura Léxica
-🔹 Tokens Principais
+# 🔹 Tipos de Dados
+# Inteiro: int
+# Float: float
+# Booleano: bool
+# Caractere: char
 
-    Parênteses: (, )
+# 🔹 Palavras Reservadas
+# Estruturas de decisão: if, else, switch, case, default
+# Estruturas de repetição: while, do, for, break
+# Entrada e saída: input, printf
+# Booleanos: true, false
 
-    Chaves: {, }
+# 🔹 Identificadores
+# regex: [a-zA-Z][a-zA-Z0-9]*
 
-    Colchetes: [, ]
+# 🔹 Números
+# regex: [0-9]+
 
-    Fim de linha: ;
+# 🔹 Comentários
+# Exemplo de comentário de linha:
+# // comentário de uma linha
 
-    Operadores de comparação: =, ==, !=, >, <, >=, <=
+# 🧱 Estruturas da Linguagem
 
-🔹 Tipos de Dados
-Tipo	Palavra-chave
-Inteiro	int
-Float	float
-Booleano	bool
-Caractere	char
-🔹 Palavras Reservadas
+# Declaração de Variáveis
+# Exemplo:
+# int x;
+# int y = 10;
+# float z = 5;
+# bool ativo = true;
+# char c = 'a';
 
-    Estruturas de decisão: if, else, switch, case, default
+# Atribuição de Valores
+# Exemplo:
+# x = 10;
+# c = 'a';
 
-    Estruturas de repetição: while, do, for, break
+# Entrada de Dados
+# Exemplo:
+# input("Digite algo");
+# int(input("Digite um número"));
 
-    Entrada e saída: input, printf
+# Saída de Dados
+# Exemplo:
+# printf("Hello");
+# printf(x);
 
-    Booleanos: true, false
+# Estruturas de Controle
 
-🔹 Identificadores
-regex
+# IF / ELSE
+# Exemplo:
+# if (x == 10) {
+#     printf("Igual");
+# } else {
+#     printf("Diferente");
+# }
 
-[a-zA-Z][a-zA-Z0-9]*
+# WHILE
+# Exemplo:
+# while (x < 10) {
+#     x++;
+# }
 
-🔹 Números
-regex
+# DO-WHILE
+# Exemplo:
+# do {
+#     x++;
+# } while (x < 10);
 
-[0-9]+
+# FOR
+# Exemplo:
+# for (i = 0; i < 10; i++) {
+#     printf(i);
+# }
 
-🔹 Comentários
-java
+# SWITCH / CASE
+# Exemplo:
+# switch(x) {
+#     case(1):
+#         printf("Um");
+#         break;
+#     case(2):
+#         printf("Dois");
+#         break;
+#     default:
+#         printf("Outro");
+#         break;
+# }
 
-// comentário de uma linha
+# ⚠️ Regras Importantes
+# - Toda instrução termina com ;
+# - Blocos delimitados por { }
+# - Strings usam " ", caracteres usam ' '
+# - Operadores válidos: ==, !=, >, <, >=, <=
 
-🧱 Estruturas da Linguagem
-Declaração de Variáveis
-java
+# 📂 Estrutura do Projeto
+# trabalho1/
+#  ├── T01.jj        # Arquivo da gramática JavaCC
+#  ├── T01.java      # Parser gerado
+#  ├── teste07.txt   # Arquivo de entrada de teste
 
-int x;
-int y = 10;
-float z = 5;
-bool ativo = true;
-char c = 'a';
+# 🐞 Debug
+# DEBUG_PARSER = true;
+# DEBUG_TOKEN_MANAGER = true;
 
-Atribuição de Valores
-java
+# 📌 Objetivo Acadêmico
+# - Demonstrar construção de linguagens simples usando JavaCC
+# - Exercitar análise léxica e sintática
+# - Praticar estruturas de controle e variáveis
 
-x = 10;
-c = 'a';
+# 👨‍💻 Autor
+# Desenvolvido para fins educacionais
 
-Entrada de Dados
-java
-
-input("Digite algo");
-int(input("Digite um número"));
-
-Saída de Dados
-java
-
-printf("Hello");
-printf(x);
-
-Estruturas de Controle
-IF / ELSE
-java
-
-if (x == 10) {
-    printf("Igual");
-} else {
-    printf("Diferente");
-}
-
-WHILE
-java
-
-while (x < 10) {
-    x++;
-}
-
-DO-WHILE
-java
-
-do {
-    x++;
-} while (x < 10);
-
-FOR
-java
-
-for (i = 0; i < 10; i++) {
-    printf(i);
-}
-
-SWITCH / CASE
-java
-
-switch(x) {
-    case(1):
-        printf("Um");
-        break;
-    case(2):
-        printf("Dois");
-        break;
-    default:
-        printf("Outro");
-        break;
-}
-
-⚠️ Regras Importantes
-
-    Toda instrução deve terminar com ;
-
-    Blocos devem ser delimitados por { }
-
-    Strings usam " ", caracteres usam ' '
-
-    Operadores válidos para comparação: ==, !=, >, <, >=, <=
-
-📂 Estrutura do Projeto
-text
-
-trabalho1/
- ├── T01.jj        # Arquivo da gramática JavaCC
- ├── T01.java      # Parser gerado
- ├── teste07.txt   # Arquivo de entrada de teste
-
-🐞 Debug
-java
-
-DEBUG_PARSER = true;
-DEBUG_TOKEN_MANAGER = true;
-
-📌 Objetivo Acadêmico
-
-    Demonstrar construção de linguagens simples usando JavaCC
-
-    Exercitar análise léxica e sintática
-
-    Praticar estruturas de controle e variáveis
-
-👨‍💻 Autor
-
-Desenvolvido para fins educacionais.
-📄 Licença
-
-Projeto de uso acadêmico livre.
-Código
-
+# 📄 Licença
+# Projeto de uso acadêmico livre
+"""
