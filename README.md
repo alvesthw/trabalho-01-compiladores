@@ -1,42 +1,38 @@
-# README da Linguagem T01 — versão comentada em Python
 
-"""
 # 🧠 Linguagem T01 — Documentação Oficial
-# Cabeçalho do projeto mostrando o nome da linguagem
 
 ## 📌 Visão Geral
-# Breve descrição do objetivo da linguagem T01
-# Desenvolvida para fins acadêmicos usando JavaCC
-# Permite criar programas simples com:
-# - Declaração de variáveis
-# - Atribuições
-# - Entrada e saída de dados
-# - Estruturas condicionais e de repetição
-# - Estruturas de decisão switch-case
-# O parser possui configuração de debug para acompanhar análise léxica e sintática
+ Desenvolvida para fins acadêmicos usando JavaCC
+ Permite criar programas simples com:
+ - Declaração de variáveis
+ - Atribuições
+ - Entrada e saída de dados
+ - Estruturas condicionais e de repetição
+ - Estruturas de decisão switch-case
+ O parser possui configuração de debug para acompanhar análise léxica e sintática
 
 ---
 
 ## ⚙️ Tecnologias Utilizadas
-# Linguagens e ferramentas usadas no projeto
-# - Java
-# - JavaCC
+### Linguagens e ferramentas usadas no projeto
+- Java
+- JavaCC
 
 ---
 
 ## 🚀 Como Executar
 
 ### 1. Pré-requisitos
-# Antes de executar, é necessário:
-# - Java JDK instalado
-# - JavaCC configurado no ambiente
+ Antes de executar, é necessário:
+- Java JDK instalado
+- JavaCC configurado no ambiente
 
 ### 2. Executando o projeto
-# Passos para compilar e executar o parser
+Passos para compilar e executar o parser
 
-# 1. Compile o arquivo .jj com JavaCC
-# bash command:
-# javacc T01.jj
+#### 1. Compile o arquivo .jj com JavaCC
+bash command:
+javacc T01.jj
 
 # 2. Compile os arquivos Java gerados
 # bash command:
@@ -79,19 +75,22 @@
 
 # 🔹 Comentários
 # Exemplo de comentário de linha:
-# // comentário de uma linha
+```
+// comentário de uma linha
+``
+## 🧱 Estruturas da Linguagem
 
-# 🧱 Estruturas da Linguagem
+### Declaração de 
+```
+ Exemplo:
+ int x;
+ int y = 10;
+ float z = 5;
+ bool ativo = true;
+ char c = 'a';
 
-# Declaração de Variáveis
-# Exemplo:
-# int x;
-# int y = 10;
-# float z = 5;
-# bool ativo = true;
-# char c = 'a';
-
-# Atribuição de Valores
+```
+### Atribuição de Valores
 # Exemplo:
 # x = 10;
 # c = 'a';
