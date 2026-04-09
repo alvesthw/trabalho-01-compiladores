@@ -1,4 +1,4 @@
-# 🧠 Linguagem T01 — Documentação Oficial
+# 🧠 Linguagem PYC — Documentação Oficial
 
 ## 📌 Visão Geral
 
