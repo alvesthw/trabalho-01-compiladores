@@ -49,7 +49,7 @@ java trabalho1.T01
 ###  Arquivo de entrada
 
 ```
-../JavaCC/src/trabalho1/teste18.txt
+../JavaCC/src/trabalho1/testeXX.txt
 ```
 
 ---
@@ -343,10 +343,10 @@ DEBUG_TOKEN_MANAGER = true;
 ##  Estrutura do Projeto
 
 ```
-trabalho1/
+JavaCC/src/trabalho1/
 ├── T01.jj
 ├── T01.java
-├── teste18.txt
+├── testeXX.txt
 ```
 
 ---
