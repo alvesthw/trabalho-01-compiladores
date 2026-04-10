@@ -1,239 +1,228 @@
-# 🧠 Linguagem PYC — Documentação Oficial
+🧠 Linguagem PYC — Documentação Oficial
+📌 Visão Geral
 
-## 📌 Visão Geral
+A Linguagem PYC é uma linguagem acadêmica desenvolvida com JavaCC, que combina características das linguagens C e Python.
 
-Linguagem desenvolvida para fins acadêmicos utilizando **JavaCC**.
+Ela foi projetada para ensinar conceitos de:
 
-Permite criar programas simples com:
-
-* Declaração de variáveis
-* Atribuições
-* Entrada e saída de dados
-* Estruturas condicionais e de repetição
-* Estruturas de decisão (`switch-case`)
-
-O parser possui configuração de debug para acompanhar a análise léxica e sintática.
-
----
-
-## ⚙️ Tecnologias Utilizadas
-
-* Java
-* JavaCC
-
----
-
-## 🚀 Como Executar
-
-### 1. Pré-requisitos
-
-* Java JDK instalado
-* JavaCC configurado no ambiente
-
-### 2. Passo a passo
-
-#### 1. Gerar o parser com JavaCC
-
-```bash
+Análise léxica e sintática
+Estruturas de controle
+Tipagem de dados
+Execução estruturada de programas
+🔥 Principais características híbridas
+Estilo C	Estilo Python
+Uso de {} para blocos	Entrada dinâmica (input)
+; obrigatório	Sintaxe simples e direta
+Tipagem explícita	Conversão inline de tipos
+switch-case, for	Flexibilidade de entrada
+⚙️ Tecnologias Utilizadas
+Java
+JavaCC
+🚀 Como Executar
+1. Pré-requisitos
+Java JDK instalado
+JavaCC configurado
+2. Passos
 javacc T01.jj
-```
-
-#### 2. Compilar os arquivos Java
-
-```bash
 javac *.java
-```
-
-#### 3. Executar o parser
-
-```bash
 java trabalho1.T01
-```
+📂 Arquivo de entrada
+../JavaCC/src/trabalho1/teste18.txt
+🔤 Estrutura Léxica
+🔹 Tokens básicos
+Parênteses: ( )
+Chaves: { }
+Colchetes: [ ]
+Fim de linha: ;
+Dois pontos: :
+🔹 Operadores
 
-#### 4. Arquivo de entrada
+Atribuição e comparação
 
-```
-../JavaCC/src/trabalho1/teste07.txt
-```
+=   ==   !=
+>   <    >=   <=
 
----
+Aritméticos
 
-## 🔤 Estrutura Léxica
-
-### 🔹 Tokens
-
-* Parênteses: `(` `)`
-* Chaves: `{` `}`
-* Colchetes: `[` `]`
-* Fim de linha: `;`
-* Operadores: `=`, `==`, `!=`, `>`, `<`, `>=`, `<=`
-
-### 🔹 Tipos de Dados
-
-* `int`
-* `float`
-* `bool`
-* `char`
-
-### 🔹 Palavras Reservadas
-
-* Decisão: `if`, `else`, `switch`, `case`, `default`
-* Repetição: `while`, `do`, `for`, `break`
-* Entrada/Saída: `input`, `printf`
-* Booleanos: `true`, `false`
-
-### 🔹 Identificadores
-
-```regex
-[a-zA-Z][a-zA-Z0-9]*
-```
-
-### 🔹 Números
-
-```regex
++   -   *   /   %
+++  --
+🔹 Tipos de dados
+int     // inteiro
+float   // ponto flutuante
+bool    // booleano
+char    // caractere
+🔹 Valores booleanos
+true
+false
+🔹 Identificadores
+[a-zA-Z_][a-zA-Z0-9_]*
+🔹 Números
 [0-9]+
-```
-
-### 🔹 Comentários
-
-```c
+🔹 Strings
+"texto"
+🔹 Comentários
 // comentário de uma linha
-```
+🧱 Estruturas da Linguagem
+🔹 1. Declaração de Variáveis
 
----
+Simples
 
-## 🧱 Estruturas da Linguagem
-
-### 🔹 Declaração de Variáveis
-
-```c
 int x;
-int y = 10;
-float z = 5;
+float y;
+bool ativo;
+char c;
+
+Com inicialização
+
+int x = 10;
+float y = 5;
 bool ativo = true;
 char c = 'a';
-```
-
-### 🔹 Atribuição
-
-```c
+🔹 2. Atribuição
 x = 10;
+x = y + 5;
 c = 'a';
-```
+🔹 3. Expressões
 
-### 🔹 Entrada de Dados
+A linguagem suporta expressões matemáticas com precedência.
 
-```c
+Operadores
+
++  -  *  /  %
+
+Exemplo
+
+x = (10 + 5) * 2;
+🔹 4. Entrada de Dados (input)
+
+Entrada simples
+
 input("Digite algo");
+
+Entrada com variável
+
+input(x);
+
+Conversão de tipo (híbrido C + Python)
+
 int(input("Digite um número"));
-```
+float(input("Digite um número"));
+char(input("Digite um caractere"));
 
-### 🔹 Saída de Dados
+👉 Destaque:
 
-```c
+Entrada dinâmica (Python)
+Conversão explícita (C)
+🔹 5. Saída (printf)
 printf("Hello");
 printf(x);
-```
-
----
-
-## 🔄 Estruturas de Controle
-
-### IF / ELSE
-
-```c
+🔄 Estruturas de Controle
+🔹 6. IF / ELSE / ELSE IF
 if (x == 10) {
     printf("Igual");
-} else {
-    printf("Diferente");
 }
-```
-
-### WHILE
-
-```c
+else if (x > 10) {
+    printf("Maior");
+}
+else {
+    printf("Menor");
+}
+🔹 7. WHILE
 while (x < 10) {
     x++;
 }
-```
-
-### DO-WHILE
-
-```c
+🔹 8. DO-WHILE
 do {
     x++;
 } while (x < 10);
-```
+🔹 9. FOR
 
-### FOR
+Estilo C
 
-```c
 for (i = 0; i < 10; i++) {
     printf(i);
 }
-```
 
-### SWITCH / CASE
+Com declaração
 
-```c
+for (int i = 0; i < 10; i++) {
+    printf(i);
+}
+🔹 10. SWITCH / CASE
 switch(x) {
-    case(1):
+    case 1:
         printf("Um");
         break;
-    case(2):
+    case 2:
         printf("Dois");
         break;
     default:
         printf("Outro");
         break;
 }
-```
+🔹 11. Vetores (Arrays)
+int vetor[10];
+float notas[5];
 
----
+👉 Apenas declaração (sem acesso implementado)
 
-## ⚠️ Regras Importantes
+🔹 12. Blocos (Funções simplificadas)
+{
+    printf("Executando bloco");
+}
 
-* Toda instrução termina com `;`
-* Blocos delimitados por `{ }`
-* Strings usam `" "` e caracteres usam `' '`
-* Operadores válidos: `==`, `!=`, `>`, `<`, `>=`, `<=`
+Limitações:
 
----
+Sem nome
+Sem parâmetros
+Sem retorno
+🧠 Regras Sintáticas Importantes
+Toda instrução termina com ;
+Blocos usam { }
+Estruturas exigem ()
+break obrigatório em case
+Tipos obrigatórios
+Strings usam " e char usa '
+⚠️ Particularidades da Linguagem
+🔥 Mistura de paradigmas
+Sintaxe rígida (C)
+Entrada dinâmica (Python)
+Conversão inline
+🔥 Conversão embutida
+int(input("Digite: "));
+🔥 Expressões completas
+Parênteses ()
+Colchetes [] como agrupadores
+🔥 Incremento / Decremento
+i++;
+i--;
+🔥 Condições
 
-## 📂 Estrutura do Projeto
+Formato padrão:
 
-```
+variavel operador valor
+🐞 Debug
+DEBUG_PARSER = true;
+DEBUG_TOKEN_MANAGER = true;
+
+Mostra:
+
+Tokens reconhecidos
+Regras sintáticas
+📂 Estrutura do Projeto
 trabalho1/
 ├── T01.jj
 ├── T01.java
-├── teste07.txt
-```
-
----
-
-## 🐞 Debug
-
-```java
-DEBUG_PARSER = true;
-DEBUG_TOKEN_MANAGER = true;
-```
-
----
-
-## 📌 Objetivo Acadêmico
-
-* Demonstrar construção de linguagens com JavaCC
-* Exercitar análise léxica e sintática
-* Praticar estruturas de controle e variáveis
-
----
-
-## 👨‍💻 Autor
+├── teste18.txt
+📌 Objetivo Acadêmico
+Construção de linguagem com JavaCC
+Estudo de parsing
+Simulação de compilador
+Integração C + Python
+👨‍💻 Autor
 
 Projeto desenvolvido para fins educacionais.
 
----
-
-## 📄 Licença
+📄 Licença
 
 Uso livre para fins acadêmicos.
