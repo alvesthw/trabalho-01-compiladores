@@ -1,108 +1,160 @@
-# Linguagem PYC — Documentação Oficial
+# Linguagem PyC — Documentação Oficial
 
 ##  Visão Geral
 
-A **Linguagem PYC** é uma linguagem acadêmica desenvolvida com **JavaCC**, que combina características das linguagens **C** e **Python**.
+A **Linguagem PyC** é uma linguagem acadêmica desenvolvida em **Java** com a ferramenta **JavaCC**, que combina características das linguagens **C** e **Python**.
 
-Ela foi projetada para ensinar conceitos de:
+Ela foi projetada para ensinar/aplicação de conceitos sobre:
 
-- Análise léxica e sintática  
-- Estruturas de controle  
-- Tipagem de dados  
-- Execução estruturada de programas  
-
----
-
-## Principais características híbridas
-
-| Estilo C                  | Estilo Python                 |
-|--------------------------|------------------------------|
-| Uso de `{}` para blocos  | Entrada dinâmica (`input`)   |
-| `;` obrigatório          | Sintaxe simples e direta     |
-| Tipagem explícita        | Conversão inline de tipos    |
-| `switch-case`, `for`     | Flexibilidade de entrada     |
+- Análise léxica e sintática
+- Estruturas de controle
+- Tipagem de dados
+- Execução estruturada de programas
 
 ---
+
+## Principais características da Linguagem PyC
+
+- Linguagem C
+- Possui tipagem explícita. Pois é uma linguagem imperativa/procedural estruturada
+- Uso do ponto e vírgula `;` é obrigatório ao final de declarações
+- Uso de chaves `{}` para início e fim de blocos de função
+- Estruturas como 'switch-case' e 'for'
+
+- Linguagem Python
+- Entrada dinâmica através da função `input`.
+- Conversão inline de tipos
+- Lógica de controle
+- Expressões parecidas
+
 
 ##  Tecnologias Utilizadas
 
-- Java  
-- JavaCC  
-
----
+- Eclipe IDE
+- Linguagem Java
+- Ferramenta JavaCC
 
 ##  Como Executar
 
 ### 1. Pré-requisitos
 
-- Java JDK instalado  
+- IDE que peermita a execução de código Java, como o Eclipse IDE
+- Java JDK instalado
 - JavaCC configurado  
 
 ### 2. Passos
 
-```bash
-javacc T01.jj
-javac *.java
-java trabalho1.T01
+- Leia este arquivo README para entender todos os outros passos necessários.
+- Faça o download do arquivo .zip ou clone o repositório para sua área de trabalho.
+
+O código principal estará no arquivo chamado 'T01.jj' que está contido toda a definição da nossa linguagem PyC.
+
+####Os arquivos de teste estão distribuídos da seguinte forma:
+- Estão nomeados na forma: testeXX.txt
+- teste01.txt até teste10.txt estão os programas considerados **válidos**, que são aceitos pela linguagem PyC
+- teste11.txt até teste20.txt estão os programadas considerados **inválidos**, que **não** são aceitos pela linguagem PyC
+- teste21.txt até teste25.txt estão os programas cópias dos válidos, porém com certas modificações que resultam em um programa **inválido**
+
+##  Estrutura do Projeto
+
+```
+JavaCC/src/trabalho1/
+├── T01.java
+├── T01.jj
+├── testeXX.txt
 ```
 
 ###  Arquivo de entrada
 
+Para alterar o arquivo que está sendo analisado, altere a linha da função 'main':
+
 ```
-../JavaCC/src/trabalho1/testeXX.txt
+FileInputStream fis = new FileInputStream(new File("..//JavaCC//src//trabalho1//testeXX.txt"));
 ```
+
+Altere o caminho, substituindo testeXX.txt pelo nome certo do seu arquivo teste
 
 ---
 
 ##  Estrutura Léxica
 
 ###  Tokens básicos
+#### 1. Literais e identificadores
 
-- Parênteses: `( )`  
-- Chaves: `{ }`  
-- Colchetes: `[ ]`  
-- Fim de linha: `;`  
-- Dois pontos: `:`  
+- NUMERO -> números inteiros
+- STRING -> "texto"
+- IDENTIFICADOR -> nomes de variáveis (x, valor_1)
 
----
+#### 2. Tipos de dados
 
-###  Operadores
+- int     // inteiro
+- float   // ponto flutuante
+- bool    // booleano
+- char    // caractere
 
-**Atribuição e comparação**
+#### 3. Valores booleanos
 
-```
-=   ==   !=
->   <    >=   <=
-```
+- true
+- false
 
-**Aritméticos**
+#### 4. Entrada e saída
 
-```
-+   -   *   /   %
-++  --
-```
+- input
+- printf
 
----
+#### 5. Estruturas de controle
 
-###  Tipos de dados
+- if
+- else
+- while
+- do
+- switch
+- case
+- for
+- break
+- default
 
-```
-int     // inteiro
-float   // ponto flutuante
-bool    // booleano
-char    // caractere
-```
+#### 6. Operadores aritméticos
 
----
+- `+`
+- `-`
+- `*`
+- `/`
+- `%`
+- `++`
+- `--`
 
-###  Valores booleanos
+#### 7. Operadores relacionais e lógicos
 
-```
-true
-false
-```
+- `=`
+- `==`
+- `!=`
+- `>`
+- `<`
+- `>=`
+- `<=`
 
----
+#### 8. Símbolos especiais
+
+- Parênteses: `( )`
+- Colchetes: `[ ]`
+- Chaves: `{ }`
+- Fim de linha: `;` (EOL)
+- Dois pontos: `:`
+- ' -> aspas simples
+- " -> aspas duplas
+
+#### 9. Comentários
+
+- // comentário
+
+#### 10. Token composto (tipo)
+
+- int
+- float
+- bool
+- char
+
 
 ###  Identificadores
 
@@ -124,14 +176,6 @@ false
 
 ```
 "texto"
-```
-
----
-
-###  Comentários
-
-```
-// comentário de uma linha
 ```
 
 ---
@@ -216,7 +260,7 @@ printf(x);
 
 ##  Estruturas de Controle
 
-###  6. IF / ELSE / ELSE IF
+###  1. IF / ELSE / ELSE IF
 
 ```c
 if (x == 10) {
@@ -230,9 +274,7 @@ else {
 }
 ```
 
----
-
-###  7. WHILE
+###  2. WHILE
 
 ```c
 while (x < 10) {
@@ -240,9 +282,7 @@ while (x < 10) {
 }
 ```
 
----
-
-###  8. DO-WHILE
+###  3. DO-WHILE
 
 ```c
 do {
@@ -250,9 +290,7 @@ do {
 } while (x < 10);
 ```
 
----
-
-###  9. FOR
+###  4. FOR
 
 ```c
 for (i = 0; i < 10; i++) {
@@ -266,9 +304,7 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
----
-
-###  10. SWITCH / CASE
+###  5. SWITCH / CASE
 
 ```c
 switch(x) {
@@ -284,9 +320,7 @@ switch(x) {
 }
 ```
 
----
-
-###  11. Vetores (Arrays)
+###  6. Vetores (Arrays)
 
 ```c
 int vetor[10];
@@ -295,7 +329,7 @@ float notas[5];
 
 ---
 
-###  12. Blocos
+###  7. Blocos
 
 ```c
 {
@@ -340,16 +374,6 @@ DEBUG_TOKEN_MANAGER = true;
 
 ---
 
-##  Estrutura do Projeto
-
-```
-JavaCC/src/trabalho1/
-├── T01.jj
-├── T01.java
-├── testeXX.txt
-```
-
----
 
 ##  Objetivo Acadêmico
 
