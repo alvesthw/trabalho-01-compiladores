@@ -360,6 +360,13 @@ trabalho1/
 
 ---
 
+## Autores
+
+- Matheus Alves Bueno  
+- Felipe Biava Favarin   
+
+---
+
 ##  Licença
 
 Uso livre para fins acadêmicos.
