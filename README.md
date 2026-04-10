@@ -1,6 +1,6 @@
-# 🧠 Linguagem PYC — Documentação Oficial
+# Linguagem PYC — Documentação Oficial
 
-## 📌 Visão Geral
+##  Visão Geral
 
 A **Linguagem PYC** é uma linguagem acadêmica desenvolvida com **JavaCC**, que combina características das linguagens **C** e **Python**.
 
@@ -13,7 +13,7 @@ Ela foi projetada para ensinar conceitos de:
 
 ---
 
-## 🔥 Principais características híbridas
+## Principais características híbridas
 
 | Estilo C                  | Estilo Python                 |
 |--------------------------|------------------------------|
@@ -24,14 +24,14 @@ Ela foi projetada para ensinar conceitos de:
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - Java  
 - JavaCC  
 
 ---
 
-## 🚀 Como Executar
+##  Como Executar
 
 ### 1. Pré-requisitos
 
@@ -46,7 +46,7 @@ javac *.java
 java trabalho1.T01
 ```
 
-### 📂 Arquivo de entrada
+###  Arquivo de entrada
 
 ```
 ../JavaCC/src/trabalho1/teste18.txt
@@ -54,9 +54,9 @@ java trabalho1.T01
 
 ---
 
-## 🔤 Estrutura Léxica
+##  Estrutura Léxica
 
-### 🔹 Tokens básicos
+###  Tokens básicos
 
 - Parênteses: `( )`  
 - Chaves: `{ }`  
@@ -66,7 +66,7 @@ java trabalho1.T01
 
 ---
 
-### 🔹 Operadores
+###  Operadores
 
 **Atribuição e comparação**
 
@@ -84,7 +84,7 @@ java trabalho1.T01
 
 ---
 
-### 🔹 Tipos de dados
+###  Tipos de dados
 
 ```
 int     // inteiro
@@ -95,7 +95,7 @@ char    // caractere
 
 ---
 
-### 🔹 Valores booleanos
+###  Valores booleanos
 
 ```
 true
@@ -104,7 +104,7 @@ false
 
 ---
 
-### 🔹 Identificadores
+###  Identificadores
 
 ```
 [a-zA-Z_][a-zA-Z0-9_]*
@@ -112,7 +112,7 @@ false
 
 ---
 
-### 🔹 Números
+###  Números
 
 ```
 [0-9]+
@@ -120,7 +120,7 @@ false
 
 ---
 
-### 🔹 Strings
+###  Strings
 
 ```
 "texto"
@@ -128,7 +128,7 @@ false
 
 ---
 
-### 🔹 Comentários
+###  Comentários
 
 ```
 // comentário de uma linha
@@ -136,9 +136,9 @@ false
 
 ---
 
-## 🧱 Estruturas da Linguagem
+##  Estruturas da Linguagem
 
-### 🔹 1. Declaração de Variáveis
+###  1. Declaração de Variáveis
 
 **Simples**
 ```c
@@ -158,7 +158,7 @@ char c = 'a';
 
 ---
 
-### 🔹 2. Atribuição
+###  2. Atribuição
 
 ```c
 x = 10;
@@ -168,7 +168,7 @@ c = 'a';
 
 ---
 
-### 🔹 3. Expressões
+###  3. Expressões
 
 A linguagem suporta expressões matemáticas com precedência.
 
@@ -184,7 +184,7 @@ x = (10 + 5) * 2;
 
 ---
 
-### 🔹 4. Entrada de Dados (`input`)
+###  4. Entrada de Dados (`input`)
 
 **Entrada simples**
 ```c
@@ -205,7 +205,7 @@ char(input("Digite um caractere"));
 
 ---
 
-### 🔹 5. Saída (`printf`)
+###  5. Saída (`printf`)
 
 ```c
 printf("Hello");
@@ -214,9 +214,9 @@ printf(x);
 
 ---
 
-## 🔄 Estruturas de Controle
+##  Estruturas de Controle
 
-### 🔹 6. IF / ELSE / ELSE IF
+###  6. IF / ELSE / ELSE IF
 
 ```c
 if (x == 10) {
@@ -232,7 +232,7 @@ else {
 
 ---
 
-### 🔹 7. WHILE
+###  7. WHILE
 
 ```c
 while (x < 10) {
@@ -242,7 +242,7 @@ while (x < 10) {
 
 ---
 
-### 🔹 8. DO-WHILE
+###  8. DO-WHILE
 
 ```c
 do {
@@ -252,7 +252,7 @@ do {
 
 ---
 
-### 🔹 9. FOR
+###  9. FOR
 
 ```c
 for (i = 0; i < 10; i++) {
@@ -268,7 +268,7 @@ for (int i = 0; i < 10; i++) {
 
 ---
 
-### 🔹 10. SWITCH / CASE
+###  10. SWITCH / CASE
 
 ```c
 switch(x) {
@@ -286,7 +286,7 @@ switch(x) {
 
 ---
 
-### 🔹 11. Vetores (Arrays)
+###  11. Vetores (Arrays)
 
 ```c
 int vetor[10];
@@ -295,7 +295,7 @@ float notas[5];
 
 ---
 
-### 🔹 12. Blocos
+###  12. Blocos
 
 ```c
 {
@@ -305,7 +305,7 @@ float notas[5];
 
 ---
 
-## 🧠 Regras Sintáticas Importantes
+##  Regras Sintáticas Importantes
 
 - Toda instrução termina com `;`  
 - Blocos usam `{ }`  
@@ -316,7 +316,7 @@ float notas[5];
 
 ---
 
-## ⚠️ Particularidades
+##  Particularidades
 
 ### Conversão inline
 ```c
@@ -331,7 +331,7 @@ i--;
 
 ---
 
-## 🐞 Debug
+##  Debug
 
 ```java
 DEBUG_PARSER = true;
@@ -340,7 +340,7 @@ DEBUG_TOKEN_MANAGER = true;
 
 ---
 
-## 📂 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 trabalho1/
@@ -351,7 +351,7 @@ trabalho1/
 
 ---
 
-## 📌 Objetivo Acadêmico
+##  Objetivo Acadêmico
 
 - Construção de linguagem com JavaCC  
 - Estudo de parsing  
@@ -360,6 +360,6 @@ trabalho1/
 
 ---
 
-## 📄 Licença
+##  Licença
 
 Uso livre para fins acadêmicos.
